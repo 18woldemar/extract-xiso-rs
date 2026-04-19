@@ -1,0 +1,17 @@
+[package]
+name = "extract-xiso"
+version = "0.1.0"
+edition = "2021"
+description = "A tool to extract original Xbox and Xbox 360 ISO (XISO) images."
+repository = "https://github.com/18woldemar/extract-xiso-rs"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+indicatif = "0.17"
+rayon = "1.8"
+memmap2 = "0.9"
+
+[profile.release]
+strip = true
+lto = true
